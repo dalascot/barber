@@ -27,8 +27,8 @@ export default function OrdersPage() {
 
   return (
     <section className="mt-8 max-w-2xl mx-auto">
-      <UserTabs isAdmin={true} />
-      <div className="mt-8">
+   <div className="mt-8">
+
         {loadingOrders && (
           <div>Loading orders...</div>
         )}
@@ -47,8 +47,8 @@ export default function OrdersPage() {
               </div>
               <div className="grow">
                 <div className="flex gap-2 items-center mb-1">
-                  <div className="grow">{order.userEmail}</div>
-                  <div className="text-gray-500 text-sm">{dbTimeForHuman(order.createdAt)}</div>
+                  <div className="grow">{order.name}</div>
+                  <div>{order.cartProducts.map(p=>p.name)} </div>
                 </div>
                 <div className="text-gray-500 text-xs">
                   {order.phone}
@@ -64,5 +64,5 @@ export default function OrdersPage() {
         ))}
       </div>
     </section>
-  );
+      )
 }
