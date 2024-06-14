@@ -105,9 +105,9 @@ export default function CartPage() {
               Total:
             </div>
             <div className="font-semibold pl-2 text-right">
-              ${subtotal}<br />
-              $5<br />
-              ${subtotal + 5}
+              {subtotal} Frs<br />
+              00 frs<br />
+              {subtotal } Frs
             </div>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function CartPage() {
               addressProps={address}
               setAddressProp={handleAddressChange}
             />
-            <button type="submit">Pay ${subtotal+5}</button>
+            <button type="submit">Pay {subtotal} Frs</button>
           </form>
         </div>
       </div>
