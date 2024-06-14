@@ -11,10 +11,10 @@ export async function GET(req) {
     const admin = await User.findOne({email:userEmail})
     const url = new URL(req.url);
   const userLog=  await Order.find({userEmail}) 
- if( admin){
-   return (Response.json(await Order.find()
+ if( ! admin){
+   return (Response.json(userLog))
  }
-    else{ Response.json(userLog)}   
+    else {Response.json(await Order.find())}  
       
      
    
