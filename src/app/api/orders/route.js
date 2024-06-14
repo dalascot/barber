@@ -10,7 +10,7 @@ export async function GET(req) {
     const userEmail = session?.user?.email;
     const admin = await User.findOne({email:userEmail})
     const url = new URL(req.url);
-  const userLog=  await Order.find({userEmail}) 
+  const userLog=  await Order.findAll({email:userEmail}) 
  
         return Response.json( userLog );
       
