@@ -14,7 +14,7 @@ export async function GET(req) {
  if( admin){
    return (Response.json(await Order.find()
  }
-    else{ Response.json(userLog}   
+    else{ Response.json(userLog)}   
       
      
    
