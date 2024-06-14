@@ -31,7 +31,7 @@ export default function AddressInputs({addressProps,setAddressProp,disabled=fals
           />
         </div>
       </div>
-      <label>Ville/label>
+      <label>Ville</label>
       <input
         disabled={disabled}
         type="text" placeholder="ville"
