@@ -10,9 +10,9 @@ export async function GET(req) {
     const userEmails = session?.user?.email;
     const userLog= await User.findOne({email:userEmails})
     const url = new URL(req.url);
-  const admin= userLog.admin  ;
- if(  admin){
-   return (Response.json(await Order.fin())
+  const isadmin= userLog.admin  ;
+ if(  isadmin===true){
+   return (Response.json(await Order.find())
  }
     return (Response.json(await Order.find({userEmail:userEmails})))  
       
