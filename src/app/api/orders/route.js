@@ -18,7 +18,7 @@ export async function GET(req) {
       if(admin){
         return Response.json(await Order.find())
       }
-      else{return ('error')}
+    
   
    
    }
