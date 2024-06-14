@@ -11,15 +11,9 @@ export async function GET(req) {
     const admin = await User.findOne({email:userEmail})
     const url = new URL(req.url);
   const userLog=  await Order.find({userEmail}) 
-    if (userEmail) {
+ 
         return Response.json( userLog );
-      }
       
-  
-      if(userEmail && admin){
-        return Response.json(await Order.find())
-      }
-    
-  
+     
    
    }
