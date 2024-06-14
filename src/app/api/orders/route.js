@@ -7,14 +7,14 @@ export async function GET(req) {
   mongoose.connect(process.env.MONGO_URL);
 
  const session = await getServerSession(authOptions);
-    const userEmail = session?.user?.email;
-    const admin = await User.findOne({email:userEmail})
+    const userEmails = session?.user?.email;
+    const admin = await User.findOne({email:userEmails})
     const url = new URL(req.url);
-  const userLog=  await Order.findOne({userEmail}) 
- if( ! admin){
+  const userLog=  await Order.find() 
+ if(  admin){
    return (Response.json(userLog))
  }
-    else {Response.json(await Order.find())}  
+    return (Response.json(await Order.find({userEmail:userEmails})))  
       
      
    
