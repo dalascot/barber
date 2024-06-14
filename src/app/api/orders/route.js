@@ -16,7 +16,7 @@ export async function GET(req) {
       }
       
   
-      if(admin){
+      if(userEmail && admin){
         return Response.json(await Order.find())
       }
     
