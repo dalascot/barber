@@ -14,10 +14,7 @@ export async function GET(req) {
         return Response.json( await Order.find({userEmail}) );
       }
       
-  const _id = url.searchParams.get('_id');
-  if (_id) {
-    return Response.json( await Order.findById(_id) );
-  }
+  
       if(admin){
         return Response.json(await Order.find())
       }
