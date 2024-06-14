@@ -8,11 +8,11 @@ export async function GET(req) {
 
  const session = await getServerSession(authOptions);
     const userEmails = session?.user?.email;
-    const admin = await User.findOne({email:userEmails})
+    const userLog= await User.findOne({email:userEmails})
     const url = new URL(req.url);
-  const userLog=  await Order.find() 
+  const admin= userLog.admin  ;
  if(  admin){
-   return (Response.json(userLog))
+   return (Response.json(await Order.fin())
  }
     return (Response.json(await Order.find({userEmail:userEmails})))  
       
