@@ -51,7 +51,7 @@ export default function OrdersPage() {
                   <div className="text-gray-500 text-sm">{dbTimeForHuman(order.createdAt)}</div>
                 </div>
                 <div className="text-gray-500 text-xs">
-                  {order.cartProducts.map(p => p.name).join(', ')}
+                  {order.phone}
                 </div>
               </div>
             </div>
