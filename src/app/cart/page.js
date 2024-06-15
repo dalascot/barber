@@ -58,7 +58,7 @@ export default function CartPage() {
       }).then(async (response) => {
         if (response.ok) {
           resolve();
-          window.location = await response.json();
+          
         } else {
           reject();
         }
@@ -67,7 +67,7 @@ export default function CartPage() {
 
     await toast.promise(promise, {
       loading: 'Preparing your order...',
-      success: 'Redirecting to payment...',
+      success: 'Merci Nous vous contacterons !!!!!',
       error: 'Something went wrong... Please try again later',
     })
   }
