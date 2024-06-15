@@ -11,13 +11,9 @@ export async function GET(req) {
     const url = new URL(req.url);
  const admin = await isAdmin();
  
-   if (admin) {
-    return Response.json( await Order.find() );
-  }
-
-  if (userEmail) {
+  
     return Response.json( await Order.find({userEmail}) );
-  }
+  
       
      
    
