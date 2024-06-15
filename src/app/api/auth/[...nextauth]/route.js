@@ -47,7 +47,7 @@ export async function isAdmin() {
   if (!userEmail) {
     return false;
   }
-  const userInfo = await UserInfo.findOne({email:userEmail});
+  const userInfo = await User.findOne({email:userEmail});
   if (!userInfo) {
     return false;
   }
