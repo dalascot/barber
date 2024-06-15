@@ -96,7 +96,7 @@ export default function CartPage() {
             <CartProduct
               key={index}
               product={product}
-              onRemove={()=>removeCartProduct(index)}
+              onRemove={removeCartProduct}
             />
           ))}
           <div className="py-2 pr-16 flex justify-end items-center">
