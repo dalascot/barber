@@ -10,9 +10,7 @@ export async function GET(req) {
     const userEmail = session?.user?.email;
     const url = new URL(req.url);
  const admin = await isAdmin();
- if(  isadmin===true){
-   return (Response.json(await Order.find())
- }
+ 
    if (admin) {
     return Response.json( await Order.find() );
   }
