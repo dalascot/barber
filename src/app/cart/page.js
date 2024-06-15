@@ -93,11 +93,7 @@ export default function CartPage() {
           )}
           {cartProducts?.length > 0 && cartProducts.map((product, index) => (
          <div key={index}><Image width={240} height={240} src={product.image} alt={''} /> </div> 
-            <CartProduct
-              key={index}
-              product={product}
-              onRemove={removeCartProduct}
-            />
+           
           ))}
           <div className="py-2 pr-16 flex justify-end items-center">
             <div className="text-gray-500">
